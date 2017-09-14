@@ -42,8 +42,8 @@ export class LineComponent implements OnInit, OnChanges, OnDestroy{
   draw(){
     this.line.graphics = new Graphics();
     this.line.removeChildren();
+    this.line.graphics.lineStyle(5, 0xffffff, 1);
     for(let i = 0; i < this.line.points.length - 1; i++){
-      this.line.graphics.lineStyle(5, 0xffffff, 1);
       this.line.graphics.moveTo(this.line.points[i].x, this.line.points[i].y);
       this.line.graphics.lineTo(this.line.points[i+1].x, this.line.points[i+1].y);
     }

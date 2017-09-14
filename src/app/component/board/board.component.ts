@@ -29,6 +29,7 @@ export class BoardComponent implements OnInit, OnChanges, AfterViewInit{
 
   ngOnChanges(changes: SimpleChanges){
     console.log('changes in board component', changes);
+    this.pixiApp.app.stage.removeChildren();
     for(let i = 0; i < this.pages.length; i++){
       this.pixiApp.app.stage.addChild(this.pages[i]);
     }
